@@ -1,3 +1,5 @@
+import random
+
 STEVILO_DOVOLJENIH_NAPAK = 10
 PRAVILNA_CRKA = "+"
 PONOVLJENA_CRKA = "O"
@@ -65,29 +67,37 @@ class Igra:
             else:
                 return NAPACNA_CRKA
 
+with open("u:\\Programiranje\\SSH\\vislice\\besede.txt", "r", encoding = "utf-8") as datoteka_z_besedami: 
+    bazen_besed = [vrstica.strip().upper() for vrstica in datoteka_z_besedami]
 
+def nova_igra():
+    return Igra(random.choice(bazen_besed))
 
+# with open najprej ni našlo besede.txt. zato kopiraš celo pot do repozitorija(tamle po executing tasks piše na terminalu) in podvojiš //
+#print(bazen_besed[ : 5])
 
+# TESTI
+# testno_geslo = "požrtvovalnost".upper()
+# testne_crke = ["A", "E", "O", "P"]
+# zmagovalne_crke = [x for x in testno_geslo]
+# igra = Igra(testno_geslo, testne_crke)
+# print(igra.napacne_crke())
+# print(igra.pravilne_crke())
+# print(igra.stevilo_napak())
+# print(igra.zmaga())
+# zmagana_igra = Igra(testno_geslo, zmagovalne_crke)
+# print(zmagana_igra.zmaga())
+# print(igra.pravilni_del_gesla())
+# print(igra.nepravilni_ugibi())
+# poskus = igra.ugibaj("r")
+# print(poskus)
+# print(igra.pravilni_del_gesla())
+# poskus = igra.ugibaj("E")
+# print(poskus)
+# print(igra.pravilni_del_gesla())
+# poskus = igra.ugibaj("x")
+# print(poskus)
+# print(igra.pravilni_del_gesla())
+# print(igra.napacne_crke())
 
-testno_geslo = "požrtvovalnost".upper()
-testne_crke = ["A", "E", "O", "P"]
-zmagovalne_crke = [x for x in testno_geslo]
-igra = Igra(testno_geslo, testne_crke)
-print(igra.napacne_crke())
-print(igra.pravilne_crke())
-print(igra.stevilo_napak())
-print(igra.zmaga())
-zmagana_igra = Igra(testno_geslo, zmagovalne_crke)
-print(zmagana_igra.zmaga())
-print(igra.pravilni_del_gesla())
-print(igra.nepravilni_ugibi())
-poskus = igra.ugibaj("r")
-print(poskus)
-print(igra.pravilni_del_gesla())
-poskus = igra.ugibaj("E")
-print(poskus)
-print(igra.pravilni_del_gesla())
-poskus = igra.ugibaj("x")
-print(poskus)
-print(igra.pravilni_del_gesla())
-print(igra.napacne_crke())
+#igra = nova_igra() in igraš v konzoli
