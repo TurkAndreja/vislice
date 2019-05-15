@@ -1,10 +1,2 @@
 # Vislice
-Repozitorij za skupni projekt pri **UVP**
-
-## Matematiki
-
-- Ivan Vidav
-
-- Matija Pretnar
-
-- Anja Petković
+Projekt za uvod v programiranje na vajah
