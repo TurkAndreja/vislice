@@ -1,6 +1,6 @@
 import random
 
-STEVILO_DOVOLJENIH_NAPAK = 10
+STEVILO_DOVOLJENIH_NAPAK = 9 #sicer deset, ampak ker igra začne se z hribčkom, moramo eno odšteti
 PRAVILNA_CRKA = "+"
 PONOVLJENA_CRKA = "O"
 NAPACNA_CRKA = "-"
@@ -100,12 +100,12 @@ class Vislice:
 
 
 
-vislice = Vislice()
-moj_id_igre = vislice.nova_igra()
-print(vislice.igre[moj_id_igre])
-vislice.ugibaj(moj_id_igre, "A")
-print(vislice.igre[moj_id_igre])
-print(vislice.igre)
+# vislice = Vislice()
+# moj_id_igre = vislice.nova_igra()
+# print(vislice.igre[moj_id_igre])
+# vislice.ugibaj(moj_id_igre, "A")
+# print(vislice.igre[moj_id_igre])
+# print(vislice.igre)
 
 
 # with open najprej ni našlo besede.txt. zato kopiraš celo pot do repozitorija(tamle po executing tasks piše na terminalu) in podvojiš //
