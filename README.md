@@ -1,2 +1,2 @@
 # Vislice
-Projekt za uvod v programiranje na vajah
+Projekt za uvod v programiranje pri vajah
